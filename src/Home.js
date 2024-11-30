@@ -1,17 +1,17 @@
 import React from 'react';
 import './Home.css';
-import Banner from './Banner';
-import Card from './Card';
+import Banner from './Banner'
+import Card from './Card'
 
-
-//ES7 snippets to fo 'rfce'
+// ES7 snippets to do 'rfce'
 
 function Home() {
-  return (
-    <div className = 'home'> 
-        <Banner />
-        <div className='home__section'>
-        <Card
+    return (
+        <div className='home'>
+            <Banner />
+
+            <div className='home__section'>
+            <Card
                 src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
                 title="Online Experiences"
                 description="Unique activities we can do together, led by a world of hosts."
@@ -46,18 +46,9 @@ function Home() {
                 description="Superhost with great amenities and a fabolous shopping complex nearby"
                 price="$70/night"
             />
+            </div>
         </div>
-    </div>
-  )
-
-
+    )
 }
 
 export default Home
-
-  // Add this in your component file to check for than one instance of react that 
-  // may differ from Web and Local
-
-  // require('react-dom');
-  // window.React2 = require('react');
-  // console.log(window.React1 === window.React2);
