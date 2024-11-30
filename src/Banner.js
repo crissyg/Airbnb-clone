@@ -2,19 +2,15 @@ import React, { useState} from 'react';
 import { Button } from '@mui/material';
 import './Banner.css';
 import Search from './Search';
-// import { useHistory } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-
-
+// import { useHistory } from "react-router-dom"; - this was depreciated 
+import { useNavigate } from "react-router-dom";
 
 function Banner() {
     const [showSearch, setShowSearch]= useState (false);
-    // const history = useHistory();
-    // const navigate = useNavigate();
-
+    const navigate = useNavigate();
 
     // const handleClick = () => {
-    //   history.push('/search'); // Navigate to '/new-route'
+    //  navigate('/search'); // Navigate to '/new-route'
     // };
   return (
     <div className='banner'>
@@ -25,11 +21,7 @@ function Banner() {
       <div className='banner_info'>
         <h1>Get out and stretch your feet</h1>
         <h5>Plan a different kind of getaway</h5>
-            {/* <Button onClick={() => navigate("/")} variant='outlined'>Explore Nearby</Button> */}
-
-        <Button variant='outlined'>Explore Nearby</Button>
-
-        {/* <Button onClick={() => history.push('/search')} variant='outlined'>Explore Nearby</Button> */}
+            <Button onClick={() => navigate("/search")} variant='outlined'>Explore Nearby</Button>
       </div>
     </div>
   )
